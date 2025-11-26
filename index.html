@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayush Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/957270508e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
                 <img src="images/logobest.png" class="logobest">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>UI/UX Designer</p>
@@ -25,7 +28,7 @@
             </div>
         </div>
     </div>
-    <!-- -----------------about---------- -->
+    <!-- ----------------------------------about--------------------------------------- -->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -35,10 +38,175 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p> I’m Ayush Singh, a tech enthusiast and frontend developer from BPIT. I’ve participated in Smart Delhi Ideathon, NSQP 2.0, and SIH 2025, and I’m part of GDG BPIT. Academically, I secured a 9.16 CGPA in Sem 1 and I’m currently improving my DSA skills. Outside tech, I’m also part of my college cricket team.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Smart Delhi Ideathon 2025</span><br>Succesfully Participated as Finalist and top 100 Teams</li>
+                            <li><span>NSQP2.0</span><br>Secured 3rd position On the Topic "QuantumDots using Blockchain"</li>
+                            <li><span>Smart India Hackathon 2025</span><br>Succesfully Cleared 2 Rounds of Internal Hackathon of BPIT and admired as Top 45 teams of BPIT </li>
+                            <li><span>Industrial Ideathon 2025</span><br>Succesfully selected for Round 2 of Industrial Ideathon 2025</li>
+                            <li><span>BreedMatch.AI</span><br>My First Ever SaaS Product....used to predict the best match for your new family pet member </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2024</span><br>Btech from GGSIPU in Information Technology</li>
+                            <li><span>2023</span><br>Btech from NIT Raipur in Biotechnology</li>
+                            <li><span>2022</span><br>Class XII : 95%</li>
+                            <li><span>2020</span><br>Class X : 93.6%</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    <!-- -----------------services----------------- -->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I design and develop responsive and modern websites using HTML, CSS, JavaScript, and frameworks like React. I focus on clean UI, fast performance, and mobile-friendly layouts.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Hackathon Support</h2>
+                    <p>Experienced in building end-to-end tech solutions for competitions like Smart India Hackathon, NSQP 2.0, and Smart Delhi Ideathon.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-diagram"></i>
+                    <h2>Data Structures</h2>
+                    <p>I can help with Data Structures & Algorithms problem solving and logic building using C++ and JavaScript for coding competitions, interview prep, and academic support.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- -----------------portfolio----------------- -->
+      <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+               <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p> The App connects you to the talented people around the world. Download it from the play store.</p>
+                    <a href="#"><i class="<i class="<i class="<i class="fa-regular fa-link"></i>"></i>"></i>"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p> The App connects you to the talented people around the world. Download it from the play store.</p>
+                    <a href="#"><i class="<i class="<i class="<i class="fa-regular fa-link"></i>"></i>"></i>"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p> The App connects you to the talented people around the world. Download it from the play store.</p>
+                    <a href="#"><i class="<i class="<i class="<i class="fa-regular fa-link"></i>"></i>"></i>"></i></a>
+                </div>
+            </div> 
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+      </div>
+
+      <!-- --------------------------contact-------------------------------------- -->
+       <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>contact@example.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>0123456789</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Ayush. Made with <i class="fas fa-heart"></i> by ItsAyush_31</p>
+        </div>
+       </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right ="0";
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px";
+        }
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby0-nv4saf6D6NPfcML8-6P1wf3FluDT1S3KUcmrRDe_IZypIe99MbuuVSf3nCOi8nEiQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
